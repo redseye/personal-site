@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #38bdf8;
+  --color-primary-dark: #0ea5e9;
+  --color-accent: #818cf8;
+  --color-accent-dark: #6366f1;
+  --color-surface: #1e293b;
+  --color-surface-light: #334155;
+  --color-dark: #0f172a;
+  --color-dark-deep: #020617;
+
+  --font-sans: var(--font-geist-sans), "Inter", "Noto Sans TC", sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark text-slate-300 antialiased;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  @apply bg-primary/20 text-primary;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-light rounded-full hover:bg-slate-500;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.glow-primary {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+.glow-accent {
+  box-shadow: 0 0 40px rgba(129, 140, 248, 0.15);
+}
