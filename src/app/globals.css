@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #38bdf8;
-  --color-primary-dark: #0ea5e9;
-  --color-accent: #818cf8;
-  --color-accent-dark: #6366f1;
-  --color-surface: #1e293b;
-  --color-surface-light: #334155;
-  --color-dark: #0f172a;
-  --color-dark-deep: #020617;
+  --color-primary: #16a34a;
+  --color-primary-dark: #15803d;
+  --color-accent: #059669;
+  --color-accent-dark: #047857;
+  --color-surface: #f0fdf4;
+  --color-surface-light: #dcfce7;
+  --color-dark: #ffffff;
+  --color-dark-deep: #f8fafc;
 
   --font-sans: var(--font-geist-sans), "Inter", "Noto Sans TC", sans-serif;
   --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
@@ -19,22 +19,22 @@ html {
 }
 
 body {
-  @apply bg-dark text-slate-300 antialiased;
+  @apply bg-white text-slate-600 antialiased;
   font-family: var(--font-sans);
 }
 
 ::selection {
-  @apply bg-primary/20 text-primary;
+  @apply bg-primary/20 text-primary-dark;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-dark;
+  @apply bg-white;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-surface-light rounded-full hover:bg-slate-500;
+  @apply bg-slate-300 rounded-full hover:bg-slate-400;
 }
 
 .text-gradient {
@@ -43,15 +43,15 @@ body {
 
 .bg-grid-pattern {
   background-image:
-    linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(22, 163, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 163, 74, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .glow-primary {
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 40px rgba(22, 163, 74, 0.2);
 }
 
 .glow-accent {
-  box-shadow: 0 0 40px rgba(129, 140, 248, 0.15);
+  box-shadow: 0 0 40px rgba(5, 150, 105, 0.2);
 }

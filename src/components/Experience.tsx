@@ -13,14 +13,14 @@ export default function Experience() {
           <span className="mb-3 inline-block text-sm font-bold uppercase tracking-widest text-primary">
             {t.experience.label}
           </span>
-          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
             {t.experience.title}
           </h2>
         </FadeIn>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-[19px] top-2 bottom-2 w-px bg-slate-800 hidden sm:block" />
+          <div className="absolute left-[19px] top-2 bottom-2 w-px bg-green-200 hidden sm:block" />
 
           <div className="space-y-10">
             {t.experience.jobs.map((job, i) => (
@@ -28,18 +28,18 @@ export default function Experience() {
                 <div className="flex gap-6">
                   {/* Timeline dot */}
                   <div className="hidden sm:flex flex-col items-center pt-1.5">
-                    <div className="h-[10px] w-[10px] rounded-full border-2 border-primary bg-dark shrink-0 z-10" />
+                    <div className="h-[10px] w-[10px] rounded-full border-2 border-primary bg-white shrink-0 z-10" />
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 rounded-2xl border border-slate-800 bg-surface/30 p-6 sm:p-8 backdrop-blur-sm transition-all hover:border-slate-700">
+                  <div className="flex-1 rounded-2xl border border-slate-100 bg-white p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-green-200">
                     <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-white">{job.company}</h3>
-                        <p className="text-primary font-medium">{job.role}</p>
+                        <h3 className="text-xl font-bold text-slate-900">{job.company}</h3>
+                        <p className="text-primary-dark font-medium">{job.role}</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="rounded-full border border-slate-700 px-3 py-0.5 text-xs font-medium text-slate-400">
+                        <span className="rounded-full border border-green-200 bg-green-50 px-3 py-0.5 text-xs font-medium text-primary-dark">
                           {job.type}
                         </span>
                         <span className="text-sm font-mono text-slate-400">{job.period}</span>
@@ -47,7 +47,7 @@ export default function Experience() {
                     </div>
                     <ul className="space-y-2">
                       {job.bullets.map((bullet, bi) => (
-                        <li key={bi} className="flex gap-3 text-sm leading-relaxed text-slate-300">
+                        <li key={bi} className="flex gap-3 text-sm leading-relaxed text-slate-600">
                           <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
                           {bullet}
                         </li>

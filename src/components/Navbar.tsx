@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-dark/80 backdrop-blur-lg border-b border-slate-800"
+          ? "py-3 bg-white/80 backdrop-blur-lg border-b border-slate-100 shadow-sm"
           : "py-5 bg-transparent"
       }`}
     >
@@ -41,14 +41,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-400 transition-colors hover:text-primary"
+              className="text-sm font-medium text-slate-500 transition-colors hover:text-primary"
             >
               {link.label}
             </a>
           ))}
           <button
             onClick={toggle}
-            className="rounded-lg border border-slate-700 px-3 py-1.5 text-xs font-bold text-slate-400 transition-all hover:border-primary hover:text-primary"
+            className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-500 transition-all hover:border-primary hover:text-primary"
           >
             {lang === "zh" ? "EN" : "中文"}
           </button>
@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={toggle}
-            className="rounded-lg border border-slate-700 px-3 py-1.5 text-xs font-bold text-slate-400"
+            className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-bold text-slate-500"
           >
             {lang === "zh" ? "EN" : "中文"}
           </button>
@@ -67,9 +67,9 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"
           >
-            <motion.span animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }} className="block h-0.5 w-6 bg-slate-300" />
-            <motion.span animate={menuOpen ? { opacity: 0 } : { opacity: 1 }} className="block h-0.5 w-6 bg-slate-300" />
-            <motion.span animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }} className="block h-0.5 w-6 bg-slate-300" />
+            <motion.span animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }} className="block h-0.5 w-6 bg-slate-600" />
+            <motion.span animate={menuOpen ? { opacity: 0 } : { opacity: 1 }} className="block h-0.5 w-6 bg-slate-600" />
+            <motion.span animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }} className="block h-0.5 w-6 bg-slate-600" />
           </button>
         </div>
       </div>
@@ -81,7 +81,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 z-40 flex flex-col bg-dark px-8 pt-32 md:hidden"
+            className="fixed inset-0 z-40 flex flex-col bg-white px-8 pt-32 md:hidden"
           >
             <div className="flex flex-col gap-8 text-center">
               {links.map((link) => (
@@ -89,7 +89,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-2xl font-bold text-slate-200"
+                  className="text-2xl font-bold text-slate-800"
                 >
                   {link.label}
                 </a>
